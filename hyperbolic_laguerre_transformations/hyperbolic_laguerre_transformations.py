@@ -122,7 +122,7 @@ def draw_frames(frames, imgx=600, imgy=600, width=1, method='poincare', nsamples
     images = [Image.new("RGB", (imgx, imgy)) for i in range(nframes)]
     for i in range(len(frames)):
         draw = ImageDraw.Draw(images[i])
-        draw.ellipse((300-100,300-100,300+100,300+100),outline=50,width=3)
+        draw.ellipse((300-100,300-100,300+100,300+100),outline=(0,0,150),width=3)
         for line in frames[i]:
             try:
                 start_theta, end_theta = get_line(line)
@@ -155,7 +155,6 @@ def draw_frames(frames, imgx=600, imgy=600, width=1, method='poincare', nsamples
 def animate_transformation_without_display(transformation,
                                            lines,
                                            nframes=100,
-                                           offset=(0,0),
                                            width=1,
                                            title=None):
     try:
@@ -165,14 +164,13 @@ def animate_transformation_without_display(transformation,
         print("Note that this determinant is double-number valued.")
         return
     frames = apply_transformations(intermediate_transformations, lines)
-    images = draw_frames(frames, offset=offset, width=width)
+    images = draw_frames(frames, width=width)
     return images
 
 
 def animate_transformation(transformation,
                            lines,
                            nframes=100,
-                           offset=(0,0),
                            width=1,
                            title=None,
                            via='tk_multiprocess'):
@@ -187,7 +185,7 @@ def animate_transformation(transformation,
         print("Note that this determinant is double-number valued.")
         return
     frames = apply_transformations(intermediate_transformations, lines)
-    images = draw_frames(frames, offset=offset, width=width)
+    images = draw_frames(frames, width=width)
     return display(images, title, via=via)
 
 
