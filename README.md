@@ -3,11 +3,13 @@ A library for visualising the mathematical transformations known as
 hyperbolic Laguerre transformations. See
 [Wikipedia](https://en.wikipedia.org/wiki/laguerre_transformations) for more.
 
-Like Euclidean Laguerre transformations, hyperbolic Laguerre transformations act on oriented lines in the plane. They don't
+Like Euclidean Laguerre transformations, hyperbolic Laguerre transformations act on oriented lines in the hyperbolic plane. They don't
 act on points.
 
-Hyperbolic Laguerre transformations differ from Euclidean Laguerre transformations in that while the latter use the dual numbers,
-the former use the double numbers (which are sometimes called the split-complex numbers).
+Hyperbolic Laguerre transformations differ from Euclidean Laguerre transformations in two ways:
+
+-   While the latter use the dual numbers, the former use the double numbers (which are sometimes called the split-complex numbers).
+-   While the latter operate on oriented lines in the Euclidean plane, the former operate on oriented lines in the hyperbolic plane.
 
 Examples:
 
