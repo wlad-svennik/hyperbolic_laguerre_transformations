@@ -1,5 +1,5 @@
 from PIL import Image, ImageDraw
-from numpy import eye, block, sin, cos, tan, arctan2, sign, array, pi, kron, set_printoptions
+from numpy import eye, block, sin, cos, tan, arctan2, sign, array, pi, kron, set_printoptions, sqrt
 from numpy.linalg import matrix_power
 from scipy.linalg import logm, expm, sqrtm, inv, det
 try:
